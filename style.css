@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* color picked up using browser-extension ie. colorZilla */
+/* color side1 - #F4B373 */
+/* color side2 - #7F33AE */
+
+body{
+    height: 100%;
+    background-image: linear-gradient(to right, #F4B373, #7F33AE);
+}
+
+/* designing carts container */
+.carts{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    box-sizing: border-box;
+}
+
+/* css of each cart_items */
+.cart_item{
+    width: 15rem;
+    border-left:5px solid #F4B373;
+    border-top: 5px solid #F4B373;
+    border-right: none;        
+    border-bottom: none;   
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 1.5rem;
+    background-color: rgba(222, 120, 144, 0.5);
+    padding: 1rem 2rem;
+    transition: all 0.3s ease-in-out;
+    opacity: .4;
+}
+/* css of active or visible cart_item */
+.cart_item.active {
+    transform: scale(1.5);
+    opacity: 1;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* cart's inside boxes design */
+.f_section{
+    background-color: #F4B373;
+    height: 10rem;
+    border-radius: 1.5rem;
+}
+.s_section{
+    display: flex;
+    margin-top: 2rem;
+}
+.s_section > div:first-child{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100%;
+    background-color: #F4B373;
+}
+.s_section > div:nth-child(2){
+    flex: 5;
+}
+.s_section > div:nth-child(2) > div:first-child{
+    height: 1rem;
+    border-radius: 1.5rem;
+    margin: .3rem 1rem;
+    background-color: #F4B373;
+}
+.s_section > div:nth-child(2) > div:nth-child(2){
+    height: 1rem;
+    width: 6rem;
+    border-radius: 1.5rem;
+    margin: 1rem 0 0 1rem;
+    background-color: #F4B373;
+}
